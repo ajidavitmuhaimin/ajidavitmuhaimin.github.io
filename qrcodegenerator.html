@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>QR generator</title>
+
+</head>
+
+<body>
+
+  <!--Google font imp-->
+
+  <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+
+  <div id="navbar">
+
+    <!--<img src="DavitAppsLogo.png" width="50px" height="30px" id="mylogo">-->
+
+    <button id="mylogo">QR code generator free</button>
+
+    <button onclick="home()">Home</button>
+
+    <button onclick="about()">About</button>
+
+  </div>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <div id="paper">
+
+    <img src="DavitAppsLogo.png" id="viewer">
+
+    <div id="a"></div>
+
+    <div id="b"></div>
+
+    <div id="c"></div>
+
+    <div id="d"></div>
+
+    <br>
+
+    <br>
+
+    <!--<div id="gen" onclick="generate()">Generate</div>-->
+
+  </div>
+
+  
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <div id="adder">
+
+    <ul>Free Qr code generator</ul>
+
+    <p>Create an QR code for free for your website url,and others</p>
+
+    <ul>How to use</ul>
+
+    <p>Click '+' button and Enter text to generate to QR code</p>
+
+    <button id="gen" onclick="generate()">+</button>
+
+  </div>
+
+  <p></p>
+
+  <!--<img src="null"/>-->
+
+</body>
+
+<script>
+
+  function home(){
+
+    window.location.reload();
+
+  };
+
+  var mydata={
+
+    "name":"Aji Davit Muhaimin",
+
+    "made":"9 April 2022"
+
+  }
+
+  function about(){
+
+    alert(mydata.name);
+
+    alert(mydata.made);
+
+  }
+
+</script>
+
+<style>
+
+body{
+
+  background-color: royalblue;
+
+}
+
+#adder{
+
+  height: 500px;
+
+  background-color: white;
+
+  border-radius: 8px;
+
+  opacity: 1.0;
+
+}
+
+  #navbar{
+
+    border: 2px solid royalblue;
+
+    background-color: royalblue;
+
+    height: 35px;
+
+    box-shadow: 0px 3px royalblue;
+
+  }
+
+  button{
+
+    height: 40px;
+
+    background: transparent;
+
+    border-radius: 20px;
+
+    border: 1px solid royalblue;
+
+    font-size: 28px;
+
+    color: white;
+
+    position: relative;
+
+    left: 370px;
+
+  }
+
+  button:hover{
+
+    color: royalblue;
+
+    opacity: 0.5;
+
+    background: white;
+
+    border-radius: 20px;
+
+  }
+
+  #viewer{
+
+    width: 200px;
+
+    height: 200px;
+
+    border: 5px solid white;
+
+    background-color: royalblue;
+
+    position: relative;
+
+    left: 340px;
+
+  }
+
+  #paper{
+
+    height: 300px;
+
+    background-color: royalblue;
+
+    border: 2px royalblue;
+
+  }
+
+  #gen{
+
+    width: 100px;
+
+    position: absolute;
+
+    background-color: white;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    box-shadow: 5px 5px grey;
+
+    left: 800px;
+
+    background-color: royalblue;
+
+    color: white;
+
+    font-size: 50px;
+
+  }
+
+  p{
+
+    font-size: 40px;
+
+    font-family: 'Josefin Sans', sans-serif;
+
+    color: royalblue;
+
+  }
+
+  ul{
+
+    font-size: 50px;
+
+    font-family: 'Josefin Sans', sans-serif;
+
+    color: royalblue;
+
+  }
+
+  #floating{
+
+    width: 150px;
+
+    height: 150px;
+
+    box-shadow: 6px 6px black;
+
+    position: relative;
+
+    border-radius: 50%;
+
+    font-size: 100px;
+
+    color: royalblue;
+
+    left: 780px;
+
+    top: 580px;
+
+  }
+
+  #floating:hover{
+
+    width: 150px;
+
+    height: 150px;
+
+    box-shadow: 1px 1px black;
+
+    position: relative;
+
+    border-radius: 50%;
+
+    font-size: 100px;
+
+    color: royalblue;
+
+    left: 780px;
+
+    top: 580px;
+
+  }
+
+  #mylogo{
+
+    position: relative;
+
+    left: 10px;
+
+    font-size: 40px;
+
+    font-family: 'Grape Nuts', cursive;
+
+  }
+
+  #viewer{
+
+    width: 300px;
+
+    height: 300px;
+
+  }
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/gh/ajidavitmuhaimin/xCDN/Davitqrgen.js"></script>
+
+</html>
