@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <title>Davit</title>
+</head>
+
+<body>
+<h1 id="davit">Davit</h1>
+<br>
+<br>
+<br>
+<p id="name">Name: Aji Davit Muhaimin</p>
+<p id="age">Age: </p>
+<p id="addr">Address: RT 05 Montallat 2 Montallat Muara Teweh Kalimantan Tengah Indonesia</p>
+<p id="em">E-Mail: ajidavitmuhaimin@yahoo.com</p>
+<p id="ig">Instagram: @ajidavitmuhaimin</p>
+<br>
+<img src="https://drive.google.com/uc?export=view&id=1NdCkpsPrQ5dhRe84JFAe6kpiVm7dSTze" id="gambar">
+<br>
+<a href="https://ajidavitmuhaimin.github.io/qrcodegenerator.html">QR code generator</a>
+<br>
+<a href="https://ajidavitmuhaimin.github.io/PasswordTester.html">Password Tester</a>
+<br>
+<p id="aweh">Created by Aji Davit Muhaimin</p>
+</body>
+
+</html>
+<style>
+  body{
+    background-color: black;
+  }
+  @keyframes animasi{
+    0%{background-position: top right;background-size: 200%;}
+    25%{background-position: left bottom;background-size: 100%;}
+    50%{background-position: right bottom;background-size: 300%;}
+    75%{background-position: top left;background-size: 100%;}
+    100%{background-position: top right;background-size: 200%;}
+  }
+  #davit{
+    position: relative;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.01);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSriZ2Ojd9XytUc5CWiLV2G4i865ROLgXx8ww&usqp=CAU");
+    animation: animasi 10s infinite;
+    -webkit-background-clip: text;
+    text-align: center;
+    font-style: bold;
+    font-size: 110px;
+    top: -90px;
+    letter-spacing: 5px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  @keyframes anku{
+    0%{letter-spacing: 4px;opacity: 0;}
+    100%{letter-spacing: 0px;opacity: 1;}
+  }
+  #name{
+    color: gray;
+    font-family: monospace;
+    animation: anku 2s;
+  }
+  #age{
+  color: gray;
+  font-family: monospace;
+  animation: anku 3s;
+  }
+  #addr{
+  color: gray;
+  font-family: monospace;
+  animation: anku 4s;
+  }
+  #em{
+  color: gray;
+  font-family: monospace;
+  animation: anku 5s;
+  }
+  #ig{
+  color: gray;
+  font-family: monospace;
+  animation: anku 6s;
+  }
+  #aweh{
+    position: relative;
+    color: rgba(0, 0, 0, 0.01);
+    background-image: linear-gradient(270deg,red,green,blue);
+    animation: animasi 5s infinite;
+    -webkit-background-clip: text;
+  }
+</style>
+<script>
+var waktu=new Date();
+var tahun=waktu.getFullYear();
+var umur=tahun-2005;
+var age=document.getElementById("age").innerHTML="Age: "+umur;
+var gambar=document.getElementById("gambar");
+var sw=window.innerWidth;
+var sh=window.innerHeight;
+gambar.style.width=sw+"px";
+gambar.style.height=sh+"px";
+/*setInterval(function(){
+  if(window.innerWidth<window.innerHeight){
+    alert("Please use Landscape");
+  }
+});*/
+</script>
