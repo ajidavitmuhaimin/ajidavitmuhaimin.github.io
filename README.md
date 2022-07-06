@@ -1,7 +1,34 @@
-## Welcome to GitHub Pages
+##Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/ajidavitmuhaimin/ajidavitmuhaimin.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
+# Aji Davit Muhaimin Page
+
+Welcome to [Aji Davit Muhaimin Page](https://ajidavitmuhaimin.github.io/)
+
+This page for me to publish my own web project.
+
+If you want to see my web project,click the Hyperlink below..
+
+[PasswordTester](https://ajidavitmuhaimin.github.io/PasswordTester.html)
+
+[QR code generator](https://ajidavitmuhaimin.github.io/qrcodegenerator.html)
+
+[My Custom Page](https://ajidavitmuhaimin.github.io/Davit.html)
+
+My photo
+![Image](https://drive.google.com/uc?export=view&id=1NdCkpsPrQ5dhRe84JFAe6kpiVm7dSTze)
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
