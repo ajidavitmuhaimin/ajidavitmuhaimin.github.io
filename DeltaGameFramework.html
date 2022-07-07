@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <title>Official DeltaGame Framework</title>
+</head>
+
+<body>
+<img id="gam1">
+<br>
+<h2 id="title">Delta</h2>
+<p id="des">Game Framework</p>
+<br>
+<p id="quote">``Less code,more efficient``</p>
+<br>
+<img id="gam2">
+<br>
+<button id="dow" onclick="dow()">Download</button>
+</body>
+
+</html>
+<style>
+  body{
+    background-color: black;
+  }
+  #gam1{
+    position: relative;
+    width: 145%;
+    left: -7px;
+    top: -12px;
+    height: 780px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS03tcEOw82QjTxbZdiOeKxrrUfAXaUqm-oFg&usqp=CAU");
+    background-size: 100%;
+    filter: blur(0px);
+    background-position: center;
+  }
+  #title{
+    position: relative;
+    color: white;
+    top: -550px;
+    left: 30px;
+    font-size: 60px;
+    letter-spacing: 4px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #des{
+    position: relative;
+    color: white;
+    left: 35px;
+    top: -570px;
+  }
+  #quote{
+    position: relative;
+    color: white;
+    font-size: 50px;
+    left: 28%;
+    letter-spacing: 1px;
+    font-family: monospace;
+  }
+  #gam2{
+    position: relative;
+    width: 145%;
+    height: 2000px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLId-TDyu5SrNNURsVjy0w4m25yFXmXH1ZgA&usqp=CAU");
+    background-size: 100%;
+    background-position: center;
+    filter: blur(15px);
+  }
+  #dow{
+    position: relative;
+    width: 75%;
+    height: 100px;
+    background-color: transparent;
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 20px;
+    left: 35%;
+    top: -1300px;
+    font-size: 50px;
+    font-family: monospace;
+  }
+  #dow:hover{
+    background-color: transparent;
+    border: 1px solid deepskyblue;
+    color: deepskyblue;
+    box-shadow: 4px 4px 10px deepskyblue;
+  }
+</style>
+<script>
+  var sw=window.innerWidth;
+  var sh=window.innerHeight;
+  console.log(sw+" "+sh);
+  if(sw<=600||sh<=1200){
+    alert("This page not compatible with this device!");
+  }
+  function dow(){
+    window.location.href="Dow.md";
+  }
+</script>
