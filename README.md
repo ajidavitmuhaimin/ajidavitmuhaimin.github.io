@@ -14,6 +14,7 @@ This is my page the place for me to publish my own web project
 - [DeltaPasswordChecker](https://ajidavitmuhaimin.github.io/DeltaPasswordChecker.html)
 - [DeltaGame Framework](https://ajidavitmuhaimin.github.io/DeltaGameFramework.html)
 - [DeltaPasswordGenerator](https://ajidavitmuhaimin.github.io/DeltaPasswordGenerator.html)
+- [Jadwal Sholat Kalteng](https://ajidavitmuhaimin.github.io/jadwalsholatkalteng/index.html)
 
 ##### Address
 - RT 05 Keluarahan Montallat 2 Kecamatan Montallat Kabupaten Barito Utara Provinsi Kalimantan Tengah Indonesia
