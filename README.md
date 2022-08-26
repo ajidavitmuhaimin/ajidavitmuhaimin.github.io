@@ -11,9 +11,6 @@ This is my page the place for me to publish my own web project
 
 - [My Bio Page](https://ajidavitmuhaimin.github.io/DavitPage.html)
 - [QR Code Generator](https://ajidavitmuhaimin.github.io/qrcodegenerator.html)
-- [DeltaPasswordChecker](https://ajidavitmuhaimin.github.io/DeltaPasswordChecker.html)
-- [DeltaGame Framework](https://ajidavitmuhaimin.github.io/DeltaGameFramework.html)
-- [DeltaPasswordGenerator](https://ajidavitmuhaimin.github.io/DeltaPasswordGenerator.html)
 - [Jadwal Sholat Barito Utara](https://ajidavitmuhaimin.github.io/jadwalsholatbarut/index.html)
 
 ##### Address
