@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+</head>
+
+<body>
+  <div id="container">
+    <img id="gambar" src="https://random.imagecdn.app/300/500">
+    <p id="teks">Random Quotes Everyday</p>
+    <p id="nama">OneQuotes</p>
+  </div>
+  <hr id="garis">
+  <marquee id="eb">E-Mail bussiness ajidavitmuhaimin@yahoo.com. Powered by TypeFit and random.responsiveimages.io</marquee>
+  <img src="https://ajidavitmuhaimin.github.io/kulatLogo.svg" alt="kulatDev">
+  <!-- Project -->
+  <script>
+//console.log('Hello World!');
+var teks=document.getElementById("teks");
+var nama=document.getElementById("nama")
+var xhr=new XMLHttpRequest();
+var url="https://type.fit/api/quotes";
+xhr.open("GET",url,true);
+xhr.responseType="json";
+var rand=Math.floor(Math.random()*1642);
+xhr.onload=function(){
+  var proses=xhr.response;
+  console.log(proses[rand].text);
+  console.log(proses[rand].author);
+  teks.innerHTML=proses[rand].text;
+  nama.innerHTML=proses[rand].author;
+}
+xhr.send();
+</script>
+<style>
+body {
+    font-size: 15pt;
+    background-color: white;
+    text-align: center;
+}
+#container{
+  position: relative;
+  border: 1px solid gray;
+  width: 100vw;
+  left: -9px;
+  top: -9px;
+  height: 100vh;
+  margin: auto;
+}
+#gambar{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  filter: brightness(70%);
+}
+#teks,#nama{
+  position: relative;
+  color: white;
+  opacity: 0.8;
+  top: -95vh;
+  font-size: 2.5vh;
+  font-family: 'Raleway', sans-serif;
+}
+#eb{
+  position: relative;
+  font-size: 10px;
+}
+</style>
+</body>
+</html>
