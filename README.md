@@ -10,7 +10,7 @@ This is my page the place for me to publish my own web project
 ##### My Web Project
 
 - [My Bio Page](https://ajidavitmuhaimin.github.io/DavitPage.html)
-- [QR Code Generator](https://ajidavitmuhaimin.github.io/qrcodegenerator.html)
+- [QR Code Generator](https://ajidavitmuhaimin.github.io/kulatqr/index.html)
 - [Jadwal Sholat Barito Utara](https://ajidavitmuhaimin.github.io/jadwalsholatbarut/index.html)
 - [Daily Quotes](https://ajidavitmuhaimin.github.io/onequotes/index.html)
 
