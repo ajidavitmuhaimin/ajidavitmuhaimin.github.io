@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>kulatQR</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+</head>
+
+<body>
+  <h3 id="judul">kulatQR</h3>
+  <input type="text" placeholder="Enter Text or URL" id="masuk">
+  <br>
+  <br>
+  <br>
+  <img id="hasil" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=Example" alt="Result">
+  <br>
+  <br>
+  <br>
+  <br>
+  <button id="tentang" onclick="tentang ()">Create</button>
+  <br>
+  <br>
+  <img src="https://ajidavitmuhaimin.github.io/kulatLogo.svg" alt="kulatLogo">
+  <br>
+  <marquee id="pow">powered by goqr.me</marquee>
+  <!-- Project -->
+</body>
+</html>
+<style>
+body {
+    font-size: 15pt;
+    background-color: white;
+    text-align: center;
+    opacity: 0.8;
+}
+#judul{
+  position: relative;
+  font-size: 5vw;
+  text-align: left;
+  color: deepskyblue;
+}
+#masuk{
+  position: relative;
+  width: 95vw;
+  height: 7vh;
+  border: 1px solid deepskyblue;
+  border-radius: 1vw;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+#tentang{
+  position: relative;
+  background-color: deepskyblue;
+  width: 45vw;
+  height: 7vh;
+  border: transparent;
+  color: white;
+  font-family: Verdana;
+  border-radius: 10vw;
+  font-size: 4vw;
+}
+#hasil{
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+#pow{
+  position: relative;
+  font-size: 3vw;
+}
+</style>
+<script>
+console.log('Welcome Users!');
+function tentang (){
+  var masuk=document.getElementById("masuk").value;
+  var hasil=document.getElementById("hasil");
+  var api="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+masuk;
+  hasil.src=api;
+  if(masuk==""){
+    alert("Text is empty");
+  }
+}
+</script>
