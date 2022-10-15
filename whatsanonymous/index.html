@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WhatsAnonymous</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+</head>
+
+<body>
+  <img id="gam1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxBTAJOdthGQGAA-Lg6m8f5z55Lav3V8oFHA&usqp=CAU">
+  <br>
+  <h4 id="bar1">Chat everyone with anonymously without save the number</h4>
+  <p id="bar2">You can't send whatsapp message without save it. Now you can. With our tools, you can send WhatsApp message without save it before with anonymously</p>
+  <br>
+  <p id="bar3">Put the number the person target to send and put your message. Click 'Send' and now you can send that message without save the number</p>
+  <br>
+  <input type="tel" placeholder="International Phone Number" id="nomtel">
+  <br>
+  <br>
+  <input type="text" placeholder="Message" id="textsen">
+  <br>
+  <br>
+  <button id="se" onclick="kirim()">Send</button>
+  <br>
+  <br>
+  <br>
+  <img src="https://ajidavitmuhaimin.github.io/kulatLogo.svg">
+  <br>
+  <p id="myname">Created by Aji Davit Muhaimin</p>
+  <!-- Project -->
+  <script>
+console.log('Hello Users!');
+function kirim(){
+  var nomtel=document.getElementById("nomtel").value;
+  var textsen=document.getElementById("textsen").value;
+  var res=encodeURI(textsen);
+  //
+  if(nomtel==""||textsen==""){
+    alert("Put the number and text");
+  }else{
+  window.open("https://api.whatsapp.com/send?phone="+nomtel+"&text="+res);
+  }
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    font-size: 15pt;
+    text-align: center;
+    opacity: 0.8;
+}
+#gam1{
+  position: relative;
+  width: 97vw;
+  height: 40vh;
+  filter: brightness(110%);
+}
+#bar1{
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  color: grey;
+  font-size: 5vw;
+}
+#bar2,#bar3{
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3vw;
+  
+}
+#nomtel{
+  position: relative;
+  border: 2px solid darkblue;
+  width: 70vw;
+  height: 5vh;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3vw;
+}
+#textsen{
+  position: relative;
+  border: 2px solid orange;
+  width: 70vw;
+  height: 5vh;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3vw;
+}
+#se{
+  position: relative;
+  width: 45vw;
+  height: 6vh;
+  background-color: darkblue;
+  color: white;
+  border: transparent;
+  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3vw;
+}
+#myname{
+  position: relative;
+  font-size: 2vw;
+  opacity: 0.8;
+}
+</style>
+</body>
+</html>
