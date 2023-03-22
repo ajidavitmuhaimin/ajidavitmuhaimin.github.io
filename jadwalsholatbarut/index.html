@@ -1,312 +1,133 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-
-  <title>Jadwal Sholat Barito Utara</title>
-
+  <title>Jadwal Sholat Barito Utara-Davit</title>
   
-
   <!-- HTML -->
-
   
-
-  <!-- Custom Styles -->
-
-  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-
-  <h2 id="title">Jadwal Sholat Barito Utara</h2>
-
-  <hr>
-
-  <div id="container">
-
-    <img id="gambar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaaTgRZFLgt9mWQ2Qtwmqk3oM_5grhg2cPwg&usqp=CAU">
-
-    <p id="jam">null</p>
-
-    
-
-    <p id="ims"></p>
-
-    <p id="sub"></p>
-
-    <p id="dzu"></p>
-
-    <p id="ash"></p>
-
-    <p id="mag"></p>
-
-    <p id="isy"></p>
-
-    <p id="lok"></p>
-
+  <img src="https://static.vecteezy.com/system/resources/previews/006/874/316/non_2x/mosque-background-islamic-design-for-background-mosque-silhouette-design-illustration-abstract-islamic-background-islamic-background-with-green-color-design-illustration-vector.jpg" id="gambar1"><h2 id="jam">00:00</h2>
+  <h6 id="tgl">null</h6>
+  <div id="box1">
+    <br>
+    <p id="sub">Subuh</p>
+    <p id="dzu">Dzuhur</p>
+    <p id="ash">Ashar</p>
+    <p id="mag">Maghrib</p>
+    <p id="isy">Isya</p>
   </div>
-
-  <p id="namaku">created by Aji Davit Muhaimin</p>
-
-  <p id="byapa">powered by myQuran</p>
-
-  <marquee id="be">Bussiness Email ajidavitmuhaimin@yahoo.com</marquee>
-
-<img src="https://ajidavitmuhaimin.github.io/kulatLogo.svg">
-<hr>
-
+  <br>
+  <br>
+  <p id="namaku">Dibuat oleh Aji Davit Muhaimin</p>
   <!-- Project -->
-
   <script>
-    //JadwalSholatKalteng
-
-//created by Aji Davit Muhaimin
-
-//powered by myQuran
-
-//Get time
-
-var waktu=new Date();
-
-var tahun=waktu.getFullYear();
-
-var bulan=waktu.getMonth()+1;
-
-//Fix time
-
-if(bulan<10){
-
-  bulan="0"+bulan;
-
-}
-
-var tanggal=waktu.getDate();
-
-if(tanggal<10){
-
-  tanggal="0"+tanggal;
-
-}
-
-//URL management
-
-var baseUrl="https://api.myquran.com/v1/sholat/jadwal/2203/";
-
-var url=baseUrl+tahun+"/"+bulan+"/"+tanggal;
-
-//Main ID 2203 Barito Utara
-
-// Example ID 1609 Kediri
-
-//Example ID 2214 Palangkaraya
-
-//Get time and view it
-
-var jam=document.getElementById("jam").innerHTML="Tanggal "+tahun+":"+bulan+":"+tanggal;
-
-//Declare the variables
-
-var ims=document.getElementById("ims");
-
+console.log('Made by Aji Davit Muhaimin');
+var jam=document.getElementById("jam");
+var gl=document.getElementById("tgl");
 var sub=document.getElementById("sub");
-
 var dzu=document.getElementById("dzu");
-
 var ash=document.getElementById("ash");
-
 var mag=document.getElementById("mag");
-
 var isy=document.getElementById("isy");
 
-var lok=document.getElementById("lok");
+var tanggal=new Date();
+var tgl=tanggal.getDate();
+var mon=tanggal.getMonth()+1;
+var yrs=tanggal.getFullYear();
+var hrs=tanggal.getHours();
+var min=tanggal.getMinutes();
 
-//Processing data from server
+if(hrs<10){
+  hrs="0"+hrs;
+}
+if(min<10){
+  min="0"+min;
+}
+if(tgl<10){
+  tgl="0"+tgl;
+}
+if(mon<10){
+  mon="0"+mon;
+}
+
+jam.innerHTML=hrs+":"+min;
+//gl.innerHTML=tgl+":"+mon+":"+yrs;
 
 var xhr=new XMLHttpRequest();
-
+var url="https://api.myquran.com/v1/sholat/jadwal/2203/"+yrs+"/"+mon+"/"+tgl;
 xhr.open("GET",url,true);
-
 xhr.responseType="json";
-
 xhr.onload=function(){
-
-  var proses=xhr.response;
-
-  //Get data from server
-
-  var imsak=proses.data.jadwal.imsak;
-
-  var subuh=proses.data.jadwal.subuh;
-
-  var dzuhur=proses.data.jadwal.dzuhur;
-
-  var ashar=proses.data.jadwal.ashar;
-
-  var maghrib=proses.data.jadwal.maghrib;
-
-  var isya=proses.data.jadwal.isya;
-
-  //Put data to paragraph
-
-  ims.innerHTML="Imsak "+imsak;
-
-  sub.innerHTML="Subuh "+subuh;
-
-  dzu.innerHTML="Dzuhur "+dzuhur;
-
-  ash.innerHTML="Ashar "+ashar;
-
-  mag.innerHTML="Maghrib "+maghrib;
-
-  isy.innerHTML="Isya "+isya;
-
-  lok.innerHTML="Lokasi "+proses.data.lokasi;
-
+  var res=xhr.response;
+  gl.innerHTML=res.data.jadwal.tanggal;
+  sub.innerHTML="Subuh "+res.data.jadwal.subuh;
+  dzu.innerHTML="Dzuhur "+res.data.jadwal.dzuhur;
+  ash.innerHTML="Ashar "+res.data.jadwal.ashar;
+  mag.innerHTML="Maghrib "+res.data.jadwal.maghrib;
+  isy.innerHTML="Isya "+res.data.jadwal.isya;
 }
-
-//Execute
-
 xhr.send();
-
-if(window.navigator.onLine){
-
-  console.log("Checking Network Good");
-
-}else{
-
-  console.log("Checking Network Offline");
-
-}
-  </script>
-
-</body>
-  
-  <style>
-    body {
-
+</script>
+<style>
+body {
+    font-size: 15pt;
     text-align: center;
-
-    background-color: whitesmoke;
-
 }
-
-#container{
-
+#gambar1{
   position: relative;
-
-  width: 85vw;
-
-  height: 80vh;
-
-  border: transparent;
-
-  margin: auto;
-
-}
-
-#gambar{
-
-  position: relative;
-
-  width: 100%;
-
+  width: 100vw;
   height: 30vh;
-
-  filter: brightness(100%);
-
+  left: -8px;
+  top: -8px;
 }
-
 #jam{
-
   position: relative;
-
-  color: gray;
-
-  opacity: 0.8;
-
-  top: -29vh;
-
-  font-family: 'Raleway', sans-serif;
-
-}
-
-#ims,#sub,#dzu,#ash,#mag,#isy,#lok{
-
-  position: relative;
-
-  text-align: center;
-
-  font-size: 15px;
-
-  color: gray;
-
-  opacity: 0.8;
-
-  top: -5px;
-
-  font-family: 'Raleway', sans-serif;
-
-  letter-spacing: 3px;
-
-}
-
-#namaku,#byapa{
-
-  position: relative;
-
-  color: gray;
-
-  opacity: 0.8;
-
-  font-size: 10px;
-
-  font-family: Helvetica;
-
-}
-
-#title{
-
-  position: relative;
-
+  top: -250px;
   text-align: left;
-
-  color: burlywood;
-
-  font-family: 'Raleway', sans-serif;
-
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
 }
-
-#be{
-
+#box1{
   position: relative;
-
   width: 85vw;
-
-  color: gray;
-
-  opacity: 0.8;
-
-  font-family: sans-serif;
-
-  font-size: 12px;
-
+  height: 35vh;
+  border: transparent;
+  border-bottom: 1px solid green;
+  background-color: rgba(255, 255, 255, 0.6);
+  top: -280px;
+  border-radius: 10px;
+  margin: auto;
 }
-    </style>
-
+p{
+  position: relative;
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+}
+#tgl{
+  position: relative;
+  top: -270px;
+  text-align: left;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+#namaku{
+  position: relative;
+  color: green;
+  top: -300px;
+  font-size: 10px;
+  font-family: 'Ubuntu', sans-serif;
+}
+</style>
+</body>
 </html>
