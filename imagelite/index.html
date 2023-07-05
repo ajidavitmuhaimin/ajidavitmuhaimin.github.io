@@ -9,6 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>ImageLite</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/node-snackbar@latest/src/js/snackbar.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/node-snackbar@latest/dist/snackbar.min.css" />
 
 </head>
 
@@ -54,7 +56,7 @@
 
       </label>
 
-      <input type="file" style="display: none" id="upl" name="img">
+      <input accept="image/jpeg" type="file" style="display: none" id="upl" name="img">
 
       <h6>Upload Image</h6>
 
@@ -66,6 +68,8 @@
 
       <br>
 
+      
+      <img id="prev" style="width: 100px" height="100px;">
       <br>
 
       <input type="submit" id="com" value="Compress"><br>
@@ -134,6 +138,11 @@
 
     background-repeat: no-repeat;
 
+  }
+  @media screen and (min-width:600px){
+    #box1{
+      top: -270px;
+    }
   }
 
   #text1{
@@ -319,5 +328,13 @@
     window.scrollTo(0,text2.getBoundingClientRect().y);
 
   });
-
+  
+  var upl=document.getElementById("upl");
+  var prev=document.getElementById("prev");
+  upl.onchange=function(ev){
+    //console.log(upl.files[0]);
+    prev.src=URL.createObjectURL(upl.files[0]);
+  }
+  
+  Snackbar.show({text:"New update! Now you can see preview for your image"});
 </script>
