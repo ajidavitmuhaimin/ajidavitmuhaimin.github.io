@@ -1,136 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-
-  <title>Jadwal Sholat Barito Utara-Davit</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   
-  <!-- HTML -->
-  
-
+  <title></title>
 </head>
 
 <body>
-  <img src="https://static.vecteezy.com/system/resources/previews/006/874/316/non_2x/mosque-background-islamic-design-for-background-mosque-silhouette-design-illustration-abstract-islamic-background-islamic-background-with-green-color-design-illustration-vector.jpg" id="gambar1"><h2 id="jam">00:00</h2>
-  <h6 id="tgl">null</h6>
-  <div id="box1">
+  <h3>Jadwal Sholat Barito Utara</h3>
+  <span id="tgl"></span>
+  <br>
+  <br>
+  <div id="card1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT09kHXdRIr7ZoIe3CSuuJc7I6ZbSOWo8G_Uw&usqp=CAU"><br>
     <br>
-    <p id="sub">Subuh</p>
-    <p id="dzu">Dzuhur</p>
-    <p id="ash">Ashar</p>
-    <p id="mag">Maghrib</p>
-    <p id="isy">Isya</p>
-
+    <span id="subuh">Subuh</span>
   </div>
+  
+  <br>
+  
+  <div id="card2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeXcKDF_qXpbabyChxlFNcGS4aAoKmYt43UQ&usqp=CAU"><br>
+    <br>
+    <span id="zuhur">Zuhur</span>
+  </div>
+  
+  <br>
+  
+  <div id="card3">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRzhtri_m2yaHefKXcUW37DkgJHngjyAWqHQ&usqp=CAU"><br>
+    <br>
+    <span id="ashar">Ashar</span>
+  </div>
+  
+  <br>
+  
+  <div id="card4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT7jXPWU-WYRPVPzW_sFCeObGMSPGtWKjugQ&usqp=CAU"><br>
+    <br>
+    <span id="maghrib">Maghrib</span>
+  </div>
+  
+  <br>
+  
+  <div id="card5">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJbMdGJZip-He5-umKKXWLaH76T0gVKJmIYQ&usqp=CAU"><br>
+    <br>
+    <span id="isya">Isya</span>
+  </div>
+  
+  <!--fab-->
+  <div id="fab"><i class="bi bi-person-fill"></i></div>
   <br>
   <br>
-  <p id="namaku">Dibuat oleh Aji Davit Muhaimin</p>
-<p>Jadwal Sholat Barito Utara</p>
-<p>v2.0</p>
-  <!-- Project -->
-  <script>
-console.log('Made by Aji Davit Muhaimin');
-var jam=document.getElementById("jam");
-var gl=document.getElementById("tgl");
-var sub=document.getElementById("sub");
-var dzu=document.getElementById("dzu");
-var ash=document.getElementById("ash");
-var mag=document.getElementById("mag");
-var isy=document.getElementById("isy");
-
-var tanggal=new Date();
-var tgl=tanggal.getDate();
-var mon=tanggal.getMonth()+1;
-var yrs=tanggal.getFullYear();
-var hrs=tanggal.getHours();
-var min=tanggal.getMinutes();
-
-if(hrs<10){
-  hrs="0"+hrs;
-}
-if(min<10){
-  min="0"+min;
-}
-if(tgl<10){
-  tgl="0"+tgl;
-}
-if(mon<10){
-  mon="0"+mon;
-}
-
-jam.innerHTML=hrs+":"+min;
-//gl.innerHTML=tgl+":"+mon+":"+yrs;
-
-var xhr=new XMLHttpRequest();
-var url="https://api.myquran.com/v1/sholat/jadwal/2203/"+yrs+"/"+mon+"/"+tgl;
-xhr.open("GET",url,true);
-xhr.responseType="json";
-xhr.onload=function(){
-  var res=xhr.response;
-  gl.innerHTML=res.data.jadwal.tanggal;
-  sub.innerHTML="Subuh "+res.data.jadwal.subuh;
-  dzu.innerHTML="Dzuhur "+res.data.jadwal.dzuhur;
-  ash.innerHTML="Ashar "+res.data.jadwal.ashar;
-  mag.innerHTML="Maghrib "+res.data.jadwal.maghrib;
-  isy.innerHTML="Isya "+res.data.jadwal.isya;
-}
-xhr.send();
-</script>
-<style>
-body {
-    font-size: 15pt;
-    text-align: center;
-}
-#gambar1{
-  position: relative;
-  width: 100vw;
-  height: 30vh;
-  left: -8px;
-  top: -8px;
-}
-#jam{
-  position: relative;
-  top: -250px;
-  text-align: left;
-  color: white;
-  font-family: 'Ubuntu', sans-serif;
-}
-#box1{
-  position: relative;
-  width: 85vw;
-  height: 35vh;
-  border: transparent;
-  border-bottom: 1px solid green;
-  background-color: rgba(255, 255, 255, 0.6);
-  top: -280px;
-  border-radius: 10px;
-  margin: auto;
-}
-p{
-  position: relative;
-  font-size: 18px;
-  font-family: 'Ubuntu', sans-serif;
-}
-#tgl{
-  position: relative;
-  top: -270px;
-  text-align: left;
-  color: white;
-  font-family: 'Ubuntu', sans-serif;
-}
-#namaku{
-  position: relative;
-  color: green;
-  top: -300px;
-  font-size: 10px;
-  font-family: 'Ubuntu', sans-serif;
-}
-</style>
+  <br>
+  <br>
+  <br>
+  <h3 id="my">Aji Davit Muhaimin</h3>
+  <a style="color: darkred" href="mailto:ajidavitmuhaimin@yahoo.com">Feedback(jika ada yang salah)</a>
+  <br>
+  <br>
+  <br>
 </body>
+
 </html>
+<style>
+  html,body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: verdana;
+    color: #323232;
+    background: ghostwhite;
+    
+  }
+  #card1,#card2,#card3,#card4,#card5{
+    position: relative;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border: transparent;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px lightgrey;
+    transition: 0.4s;
+  }
+  #card1>img,#card2>img,#card3>img,#card4>img,#card5>img{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  #card1>span,#card2>span,#card3>span,#card4>span,#card5>span{
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  #card1:hover,#card2:hover,#card3:hover,#card4:hover,#card5:hover{
+    box-shadow: 10px 10px 15px lightgrey;
+    transform: scale(1.06);
+  }
+  #fab{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: ghostwhite;
+    top: 90vh;
+    left: 80vw;
+    box-shadow: 5px 5px 15px lightgrey;
+  }
+  #fab>i{
+    position: relative;
+    font-size: 30px;
+    top: 20%;
+  }
+</style>
+<script type="module">
+  
+  var y=new Date().getFullYear();
+  var m=new Date().getMonth()+1;
+  var d=new Date().getDate();
+  if(m<10){
+    m="0"+m;
+  }
+  if(d<10){
+    d="0"+d;
+  }
+  var tgl=document.getElementById("tgl").innerHTML=d+" "+m+" "+y;
+  var f=await fetch("https://api.myquran.com/v1/sholat/jadwal/2203/"+y+"/"+m+"/"+d).then(function(ev1){
+    return ev1.json();
+  }).then(function(ev2){
+    console.log(ev2);
+    
+    var subuh=document.getElementById("subuh").innerHTML="Subuh "+ev2.data.jadwal.subuh;
+    var zuhur=document.getElementById("zuhur").innerHTML="Dzuhur "+ev2.data.jadwal.dzuhur;
+    var ashar=document.getElementById("ashar").innerHTML="Ashar "+ev2.data.jadwal.ashar;
+    var maghrib=document.getElementById("maghrib").innerHTML="Maghrib "+ev2.data.jadwal.maghrib;
+    var isya=document.getElementById("isya").innerHTML="Isya "+ev2.data.jadwal.isya;
+    
+  });
+  
+  document.getElementById("fab").addEventListener("click",function(){
+    window.scrollTo({top:1200,behavior:"smooth"});
+  });
+  
+  console.log(navigator);
+  </script>
