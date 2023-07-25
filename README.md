@@ -28,7 +28,7 @@ ___
 ___
 [![Instagram](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png)](https://www.instagram.com/ajidavitmuhaimin)
 ___
-[![Email](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_(2020).svg/320px-Gmail_icon_(2020).svg.png)](ajidavitmuhaimin@gmail.com)
+[![Email](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_(2020).svg/320px-Gmail_icon_(2020).svg.png)](mailto:ajidavitmuhaimin@gmail.com)
 ___
 
 ##### Address
