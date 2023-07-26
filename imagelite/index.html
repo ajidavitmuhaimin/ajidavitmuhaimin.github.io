@@ -4,155 +4,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ImageLite Beta</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  
+  <title></title>
+  <!--<script type="text/javascript" src="cdn_modules/material-design-lite@1.3.0/material.min.js"></script>
+  <link rel="stylesheet" href="cdn_modules/material-design-lite@1.3.0/material.amber-blue.min.css">-->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-blue.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
 
 <body>
-  <!--navbar-->
-  <div id="navbar">
-    <span>ImageLite</span>
-    <i onclick="ab()" class="material-icons">account_circle</i>
+  <div class="mdl-layout mdl-js-layout mdl-layout">
+    <div class="mdl-layout__drawer">
+      <nav class="mdl-navigation">
+      <a href="" class="mdl-navigation__link">About</a>
+      <a href="" class="mdl-navigation__link">Github</a>
+      <a href="" class="mdl-navigation__link">Follow Me On Facebook</a>
+      <a href="" class="mdl-navigation__link">Follow Me On Instagram</a>
+      <a href="" class="mdl-navigation__link">Email me</a>
+      </nav>
+    </div>
   </div>
-  <!--navbar-->
+  <h1>ImageLite</h1>
+  <h6>Reducing dont mean losing</h6>
+  <span class="mdl-chip mdl-js-chip">
+    <span class="mdl-chip__text">Photo Compressor</span>
+  </span>
+  <span class="mdl-chip mdl-js-chip">
+    <span class="mdl-chip__text">Image Compressor</span>
+  </span>
+  <br>
+  <br>
+  <span class="mdl-chip mdl-js-chip">
+    <span class="mdl-chip__text">ImageLite</span>
+  </span>
+  <span class="mdl-chip mdl-js-chip">
+    <span class="mdl-chip__text">Saving Storage</span>
+  </span>
+  <span class="mdl-chip mdl-js-chip">
+    <span class="mdl-chip__text">Quality</span>
+  </span>
+  <br>
+  <br>
+  <br>
+  <h6 style="width: 200px;margin: auto;">Compress your image without losing quality for saving storage easily</h6>
+  <br>
+  <img src="we.jpg" alt="preview" style="width: 200px;height: 200px;border: 1px solid lightgrey;position: relative;" id="prev"><br>
+  <br>
+  <br>
+  <input id="qu" type="range" class="mdl-slider mdl-js-slider" min="1" max="99" value="30">
+  <br>
+  <br>
+  <button onclick="upl()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Start Compress</button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div style="margin: auto;text-align:left;" class="mdl-card mdl-js-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h1 class="mdl-card__title-text">Easy To Use</h1>
+    </div>
+    <div class="mdl-card__supporting-text">Easy to use with simple UI build with Material Design Lite by Google Material Design Team</div>
+  </div>
+  <br>
+  <div style="margin: auto;text-align: left;" class="mdl-card mdl-js-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h1 class="mdl-card__title-text">Powerfull And Useful</h1>
+    </div>
+    <div class="mdl-card__supporting-text">Powerfull image compressing engine for reducing image without losing quality and useful for content creator or just for saving storage</div>
+  </div>
+  <br>
+  <h4>Have a feedback?</h4>
+  <br>
+  <div class="mdl-textfield mdl-js-textfield">
+    <input type="text" class="mdl-textfield__input">
+  </div>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Submit your feedback</button>
+  <br>
+  <br>
+  <footer class="mdl-mini-footer mdl-js-mini-footer">
+    <h6>Made by Aji Davit Muhaimin</h6>
+    <img src="DCE.svg" alt="dice" width="70px" height="70px">
+  </footer>
   
-  <!--preview-->
-  <img src="#" id="prev">
-  <!--preview-->
-  
-  <!--slider-->
-  <input type="range" max="99" min="1" id="qu">
-  <!--slider-->
+  <button onclick="kli()" style="position: fixed;left: 80vw;top: 90vh;z-index: 2;" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">+</button>
   
   
-  <button onclick="upl()" id="sc">Start Compressing</button>
   
-  <!--fab-->
-  <label id="fab" for="fs"><i class="material-icons">add</i></label>
-  <!--fab-->
+  <input type="file" accept="image/*" id="fs" style="display: none">
   
-  <!--breh-->
-  <input style="display: none" type="file" accept="image/jpeg" id="fs">
-  <!--breh-->
   
 </body>
 
 </html>
-
-<script type="text/javascript" src="cdn_modules/material-design-lite@1.3.0/material.min.js"></script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
   html,body{
-    text-align: center;
-    margin: 0;
-    font-family: 'Noto Sans', sans-serif;
-  }
-  #navbar{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    height: 60px;
-    background: rebeccapurple;
-    text-align: left;
-    box-shadow: 0px 5px 15px lightgrey;
-    color: white;
-  }
-  #navbar>span{
-    position: relative;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    top: 20%;
-    left: 2%;
-  }
-  #navbar>i{
-    position: relative;
-    left: 60vw;
-    top: 30%;
-  }
-  #fab{
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    background: rebeccapurple;
-    color: white;
-    border-radius: 35%;
-    border: transparent;
-    top: 90vh;
-    left: 80vw;
-    box-shadow: 5px 5px 15px lightgrey;
-  }
-  #fab>i{
-    position: relative;
-    top: 30%;
-  }
-  #prev{
-    position: relative;
-    width: 300px;
-    height: 300px;
-    border: 1px solid grey;
-    margin: auto;
-    top: 100px;
-  }
-  #qu{
-    appearance: none;
-    position: relative;
-    width: 300px;
-    height: 40px;
-    top: 180px;
-    background: rebeccapurple;
-    border-radius: 20px;
-  }
-  #qu::-webkit-slider-thumb{
-    appearance: none;
-    background: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
-  #sc{
-    position: relative;
-    top: 230px;
-    background: lightgrey;
-    border: transparent;
-    font-weight: bold;
-    color: black;
-    width: 180px;
-    height: 40px;
-    border-radius: 20px;
-  }
-  @media screen and (min-width:600px){
-    #prev{
-      position: relative;
-      left: 25vw;
-    }
-    #qu{
-      position: relative;
-      left: -6vw;
-    }
-    #sc{
-      position: relative;
-      left: -31vw;
-    }
-    #navbar>i{
-      position: relative;
-      left: 80vw;
-    }
-    #fab{
-      position: fixed;
-      top: 30vh;
-      left: 90vw;
-    }
+    text-align: center!important;
   }
 </style>
 <script>
   var fs=document.getElementById("fs");
   fs.onchange=function(){
     document.getElementById("prev").src=URL.createObjectURL(fs.files[0]);
+    //console.log(fs.files[0].name);
+  }
+  function kli(){
+    fs.click();
   }
   function upl(){
     var fs=document.getElementById("fs");
@@ -163,19 +119,15 @@
     formData.append("quality",qu);
     
     var xhr=new XMLHttpRequest();
-    xhr.open("POST","upload.php",true);
+    xhr.open("POST","http://ajidavitmuhaimin.epizy.com/development/upload.php",true);
     xhr.onloadstart=function(){
       alert("Please wait a while.....");
     }
     xhr.onloadend=function(){
       alert("Your image successfully uploaded and compressed");
-      window.location.href="http://ajidavitmuhaimin.epizy.com/development/upload.php";
+      //window.location.href="http://ajidavitmuhaimin.epizy.com/development/upload.php";
+      window.location.href="http://ajidavitmuhaimin.epizy.com/development/result/"+fs.files[0].name;
     }
     xhr.send(formData);
-  }
-  
-  function ab(){
-    alert("Developed by Aji Davit Muhaimin");
-    alert("Email ajidavitmuhaimin@gmail.com");
   }
   </script>
