@@ -1,0 +1,10 @@
+{
+  "name": "Aji Davit Muhaimin Page",
+  "short_name": "Aji Davit M Page",
+  "theme_color": "#4e4e4e",
+  "background_color": "#4e4e4e",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/MyPage.html"
+}
